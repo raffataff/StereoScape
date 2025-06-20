@@ -1,0 +1,611 @@
+body {
+    margin: 0;
+    padding: 0px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 14px;
+    background-color: #000000;
+    color: #06cc0f;
+    display: flex;
+    flex-direction: column;
+    height: 97vh;
+    width: 99vw;
+}
+
+.container-inner {
+    padding: 10px 0px 7px 0px ;
+    margin: 5px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #0aa5d459;
+    height: 60px;
+}
+
+
+.branding {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+}
+
+.logo {
+    position: absolute;
+    top: -10px; /* Adjust the top value to control the vertical position */
+    left: 0px; /* Adjust the left value to control the horizontal position */
+    z-index: 1; /* Ensure the logo is on top of other elements */
+}
+  
+.logo-image {
+    width: 124px; /* Adjust the width to control the size of the logo */
+    height: auto; /* This will maintain the aspect ratio of the logo */
+}
+  
+h1 {
+    padding: 5px;
+    background: linear-gradient(to right, red, #06cc0f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+}
+
+
+h2 {
+    padding: 2px;
+    background: linear-gradient(to right, #06cc0f, #0aa5d4e3);
+    -webkit-background-clip: text;
+    position: absolute;
+    top: 30px;
+    left: 140px;
+    color: transparent;
+    font-size: 1.2rem;
+}
+
+
+
+
+button {
+    background-color: rgba(95, 158, 160, 0.055);
+    font-family: 'Courier New', Courier, monospace;
+    color: #06cc0f;
+    padding: 10px;
+    border: 2px solid #09fc151f;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #06cc0f;
+    color: #1d1d1d;
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button.active {
+    background-color: #06cc0f;
+    color: #1d1d1d;
+  }
+  
+
+.analysis-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    top: 20px;
+    left: 300px;
+    margin-right: 10px;
+    color: rgb(0, 145, 145);
+    border-color: #06cc0f;
+    border: 0px solid #0aa5d459;
+    border-radius: 4px;   
+    width: 400px; 
+}
+
+
+#pauseIndicator {
+    position: absolute;
+      top: 100px;
+      left: 600px;
+      font-size: 20px;
+  }
+
+
+
+.controls {
+    display: flex;
+    justify-content: space-between; /* Change flex-start to space-between */
+    align-items: center;
+    justify-content: center;
+    padding-right: 30px;
+    height: 60px;
+    border: 0px solid #09fc151f;
+    position: absolute;
+    left: 600px;
+    top: 10px;
+}
+
+
+.controls button {
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 20px;
+    justify-content: center;
+    align-content: center;
+    padding: 10px 10px;
+    background-color: rgba(95, 158, 160, 0.055);
+    color: #06cc0f;
+    border: 2px solid #09fc151f;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+    margin-bottom: 20px;
+  }
+
+  .controls button:hover {
+    background-color: #06cc0f;
+    color: #1d1d1d;
+    transition: background-color 0.3s ease;
+  }
+  
+#displayMessage {
+    position: absolute;
+    top: 30px;
+    left: 400px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.custom-file-upload {
+    display: flex;
+    position: relative;
+    top: 8px;
+    left: 20px;
+    width: 15px;
+    height: 15px;
+    justify-content: center;
+    align-content: center;
+    padding: 10px 10px;
+    background-color: rgba(95, 158, 160, 0.055);
+    color: #06cc0f;
+    border: 2px solid #09fc151f;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+    
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+ background-color: #06cc0f;
+    color: #1d1d1d;
+    transition: background-color 0.3s ease;
+}
+
+
+#audioFileInput {
+    display: none;
+}
+
+.canvas-settings {
+    position: relative;
+    top: -10px;
+    left: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid #0aa5d459;
+    
+}
+
+
+label {
+    color: rgb(0, 145, 145);
+    font-size: 12px;
+    align-self: center;;
+
+   
+}
+
+select {
+    padding: 10px ;
+    background-color: rgba(95, 158, 160, 0.055);
+    color: #06cc0f;
+    border: 2px solid #09fc151f;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    text-align: center;
+    appearance: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+}
+
+select:hover {
+    background-color: #06cc0f;
+    color: #1d1d1d;
+    transition: background-color 0.3s ease;
+}
+
+#visualizationTypeSelect {
+    display: flex;
+    flex-direction: column;
+    padding: 10px ;
+    padding-right: 30px;
+    background-color: rgba(95, 158, 160, 0.055);
+    color: #06cc0f;
+    border: 2px solid #09fc151f;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    text-align: center;
+    align-items: center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.visualizationSelectContainer {
+    text-align: center;
+}
+
+.visualizationSelectContainer:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #06cc1048;
+}
+
+
+.visualizationSelectContainer option {
+    background-color: #1d1d1d;
+    color: #06cc0f;
+}
+
+
+
+.color-mode-toggle {
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+}
+
+
+.color-mode-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #06cc1048;
+}
+
+
+.color-mode-toggle option {
+    background-color: #1d1d1d;
+    color: #06cc0f;
+}
+
+.kaleidoscope-color-mode-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.kaleidoscope-color-mode-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #06cc1048;
+}
+
+.kaleidoscope-color-mode-toggle option {
+    background-color: #1d1d1d;
+    color: #06cc0f;
+}
+
+
+.scroll-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+.scroll-button-container span {
+    color: #06cc0f;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    right: 100px;
+    top: 36px;
+   
+}
+  
+  
+#frequencyZoomSlider {
+    width: 200px;
+    height: 13px;
+    -webkit-appearance: none;
+    background-color: rgba(95, 158, 160, 0.055);
+    outline:#09fc155b solid 1px;
+    border: 1px solid #09fc151f;
+    border-radius: 10px;
+    margin: 0 10px;
+    transform: scaleX(-1); /* Invert the direction */
+}
+
+.frequencyZoomSlider label {
+    margin-bottom: 10px;
+    color: #06cc0f;
+    font-size: 12px; 
+}
+
+#frequencyZoomSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    border: 1px solid #06cc0f;
+    cursor: grab;
+    transform: scaleX(-1); /* Invert the thumb direction */
+   
+}
+
+#frequencyZoomSlider::-webkit-slider-thumb:hover {
+    background-color: #06cc0f;
+    border-color: #06cc0f;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+.background-settings {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    padding: 0px 10px;
+    background-color: rgba(95, 158, 160, 0.055);
+    color: #06cc0f;
+    border: 2px solid #09fc151f;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+.background-settings label {
+    margin-bottom: 5px;
+    align-self: center;
+}
+
+.background-settings button {
+    background-color: rgba(95, 158, 160, 0.055);
+    border: 2px solid #09fc151f;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-self: end;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    width: 3px;
+    height: 3px;
+
+}
+
+.background-settings button:hover {
+    background-color: #06cc0f;
+    transition: background-color 0.3s ease;
+}
+
+.background-settings button.active {
+    background-color: #0afa02d8;
+}
+
+
+
+.panning-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 10px;
+    margin-top: 10px;
+    position: absolute;
+    top: 73px;
+    left: 805px;
+    z-index: 1;
+    background-color: rgba(95, 158, 160, 0.055);
+    border: 2px double #0aa5d431;
+    border-radius: 10px;
+    border-top: 0px;
+}
+
+.panning-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+   
+}
+
+
+.exceeded-frequencies-container h3 {
+    margin-bottom: 1px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.exceeded-frequencies-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exceeded-frequencies-container-Left {
+    position: absolute;
+    top: 83px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: rgba(95, 158, 160, 0.055);
+    border: 1px solid #09fc151f;
+    border-radius: 4px;
+    color: rgb(0, 145, 145);
+    width: 70px;
+    max-height: 800px; /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+}
+
+.exceeded-frequencies-container-Right{
+    position: absolute;
+    top: 83px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: rgba(95, 158, 160, 0.055);
+    border: 1px solid #09fc151f;
+    border-radius: 4px;
+    color: rgb(0, 145, 145);
+    width: 70px;
+    max-height: 800px; /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+}
+
+
+.visvisualizer-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas-container {
+    position: fixed;
+    top: 83px;
+    left: 107px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    border: 1px solid #0aa5d459;
+}
+
+
+#leftChannelCanvas,
+#rightChannelCanvas {
+    width: 850px;
+    height: 990px;
+    flex: 1;
+    border: 0px solid #09fc151f;
+    background-color: rgba(95, 158, 160, 0.055);
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.fullscreenContainer {
+    border-radius: 4px;
+    border: 0px solid #06cc107a;
+    position: fixed;
+    top: 0px;
+    right: 20px;
+    z-index: 1;
+}
+
+#fullscreenButton {
+    padding: 10px;
+    background-color: rgba(95, 158, 160, 0.055);
+    color: #06cc0f;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#fullscreenButton:hover {
+background-color: #09fc15;
+}
+
+#fullscreenButton i {
+font-size: 18px;
+}
+
+.fullscreen .container-inner,
+.fullscreen .analysis-container,
+.fullscreen .exceeded-frequencies-container-Left,
+.fullscreen .exceeded-frequencies-container-Right {
+display: none;
+}
+
+.fullscreen .fullscreenContainer {
+display: block;
+}
+
+.fullscreen #leftChannelCanvas,
+.fullscreen #rightChannelCanvas {
+width: 50%;
+height: 100vh;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 0;
+}
+
+.fullscreen #rightChannelCanvas {
+left: 50%;
+}
+
+.fullscreen .panning-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 10px;
+    margin-top: 10px;
+    position: absolute;
+    top: -10px;
+    left: 805px;
+    z-index: 1;
+    border: 2px double #0aa5d431;
+    border-radius: 10px;
+    border-top: 0px;
+}
+
+

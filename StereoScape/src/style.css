@@ -1,0 +1,108 @@
+/* 
+    This is the CSS stylesheet for the StereoScape application.
+    It defines the layout, colors, fonts, and overall appearance of the user interface.
+*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.branding {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.analysis-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.custom-file-upload {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #cccccc;
+}
+
+.canvas-settings {
+    margin-bottom: 20px;
+}
+
+.scroll-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.scroll-button-container input[type="range"] {
+    margin-left: 10px;
+}
+
+.panning-indicator {
+    position: relative;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.panning-circle {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.visualizer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.canvas-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.exceeded-frequencies-container-Left,
+.exceeded-frequencies-container-Right {
+    margin-top: 20px;
+}
+
+.exceeded-frequencies-list {
+    list-style-type: none;
+    padding: 0;
+}
