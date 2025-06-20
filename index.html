@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stereoscape</title>
+    <!-- <base href="https://sons-of-arn.neocities.org"> -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/ssLogo512.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="container-inner">
+            <div class="branding">
+                <div class="logo">
+                    <a href="#">
+                    <img src="images/ssLogo2192.png" alt="Logo" class="logo-image">
+                    </a>
+                </div>
+                <h2>StereoScapes</h2>
+            </div>
+
+            <!-- Analysis Area -->
+            <div class="analysis-container">
+                <div id="audioFileNameDisplay"></div>
+                <div id="audioDurationDisplay"></div>
+                <div id="currentTimeDisplay"></div>
+                <div id="pauseIndicator" style="display: none;">Audio Paused</div>
+                <div id="frequencyThresholdDisplay"></div>
+            </div>
+            <div id="displayMessage" style="color: red;"
+                >Upload file to begin --> </div>
+            
+                <!-- UI CONTROLS -->
+            <div class="controls">
+                <label for="audioFileInput" class="custom-file-upload">
+                    <i class="fas fa-file-audio"></i> 
+                </label>
+                <input id="audioFileInput" type="file" accept="audio/*">
+                <button id="analyzeButton" disabled><i class="fas fa-play"></i></button>
+                <button id="pauseButton" disabled><i class="fas fa-pause"></i></button>
+                <button id="stopButton" disabled><i class="fas fa-stop"></i></button>
+                <button id="clearButton" disabled>Clear</button>
+            </div>
+
+           
+
+            <div class="canvas-settings">
+                <div class="visualizationSelectContainer">
+                    <label for="visualizationTypeSelect">Visualizer</label>
+                    <select id = 'visualizationTypeSelect'></select>
+                </div> 
+                  <div class="color-mode-toggle">
+                    <label for="colorModeToggle">Colour</label>
+                    <select id="colorModeToggle">
+                        <option value="volume" selected>Volume</option>
+                        <option value="temporal">Amethyst</option>
+                        <option value="electric">Electric</option>
+                        <option value="rainbow">Rainbow</option>
+                        <option value="sight">Sight</option>
+                        <option value="frequencyRange">Sunset</option>
+                        <option value="exceededFrequency">Whack</option>
+                        <option value="smile">Smile</option>
+                      </select>
+                    </div>
+
+                <div class="scroll-button-container">
+                    <label for="frequencyZoomSlider">Zoom</label>
+                    <input type="range" id="frequencyZoomSlider" min="0.01" max="1" step="0.01" value="1">
+                    <span id="frequencyZoomValue"></span>
+                </div>
+                
+                <!-- Background viz -->
+                <div class="background-settings" style="display: none;">
+                    <label for="background-settings">Background</label>
+                    <div>
+                        Psychedelic
+                        <button id="psychedelicBackgroundButton" ></button>
+                    </div>
+                 </div> 
+                 
+                 <!-- Fullscreen button -->
+                <div class="fullscreenContainer">
+                  <button id="fullscreenButton">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+
+            </div>  
+        </div>
+            <div class="panning-indicator">
+                <div id="panningCircle" class="panning-circle"></div>
+            </div>
+            
+            <div class="exceeded-frequencies-container-Left">
+                <h3>Left</h3>
+                <ul class="exceeded-frequencies-list" id="exceededFrequenciesLeft"></ul>
+            </div>
+
+        <div class="visualizer-container">
+            
+            <!-- Visualizer canvas -->
+            <div class="canvas-container">
+                <canvas id="leftChannelCanvas"></canvas>
+                <canvas id="rightChannelCanvas"></canvas>
+            </div>
+        </div>
+
+        <div class="exceeded-frequencies-container-Right">
+            <h3>Right</h3>
+            <ul class="exceeded-frequencies-list" id="exceededFrequenciesRight"></ul>
+        </div> 
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
